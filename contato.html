@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Doum Odara — Fale Conosco</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="app.js" defer></script>
+</head>
+<body class="theme-light">
+
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">🌙</span> Doum Odara</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="contato.html" aria-current="page">Fale Conosco</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn small" aria-label="Alternar tema">🌙</button>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="hero container">
+    <div>
+      <h1>Fale Conosco</h1>
+      <p class="lead">Tem alguma dúvida, sugestão ou deseja falar sobre um pedido? Preencha o formulário abaixo que entraremos em contato o mais rápido possível.</p>
+    </div>
+    <img src="doum.png" alt="Fale Conosco Loja Aurora">
+  </section>
+
+
+  <section class="contact container">
+    <h2>Formulário de Contato</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+      </div>
+      <div class="form-group">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+      </div>
+      <button type="submit" class="btn primary">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq container" style="margin-top:2rem;">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-controls" style="margin-bottom:.75rem;">
+      <button id="faq-open-all" class="btn small ghost">Abrir todos</button>
+      <button id="faq-close-all" class="btn small ghost">Fechar todos</button>
+      <span id="faq-counter" style="margin-left:1rem; font-size:.95rem;">0 abertas</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Qual o prazo de resposta? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Respondemos todos os contatos em até 24 horas úteis.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Como posso rastrear meu pedido? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Após o envio, você recebe um código de rastreio via e-mail.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Posso cancelar um pedido? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Sim, contate-nos antes do envio do produto para realizar o cancelamento.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Quais são as formas de pagamento? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Aceitamos cartões de crédito, pix e boleto bancário.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Vocês possuem loja física? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Atualmente, operamos exclusivamente online para melhor atender nossos clientes.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Como faço para trocar um produto? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Você pode solicitar a troca em até 10 dias após o recebimento do produto.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Vocês oferecem suporte pós-venda? <span class="toggle-icon">+</span></button>
+      <div class="faq-a">Sim, nossa equipe está disponível para ajudar com qualquer dúvida ou problema após a compra.</div>
+  </section>
+
+
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <small>&copy; <span id="year"></span> Doum Odara — Artigos Religiosos. Feito com fé, amor e respeito.</small>
+
+    <div style="margin-top:.75rem; display:flex; justify-content:center; gap:1rem;">
+      <a href="https://www.tiktok.com/@doumodara?_t=ZM-90vu83D2NdA&_r=1" target="_blank" rel="noopener" aria-label="TikTok Doum Odara" style="font-size:1.4rem;">
+        <img src="tiktok.jpg" alt="TikTok" width="26" height="26" style="vertical-align:middle;">
+      </a>
+      <a href="https://www.instagram.com/doumodara?igsh=NTQyZHZ2cnYyOThr" target="_blank" rel="noopener" aria-label="Instagram Doum Odara" style="font-size:1.4rem;">
+        <img src="insta.jpg" alt="Instagram" width="26" height="26" style="vertical-align:middle;">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      alert('Mensagem enviada com sucesso! (simulação)');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
