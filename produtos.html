@@ -2,22 +2,30 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Doum Odara — Produtos</title>
 
-  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
-  
+
+  <!-- JS -->
   <script src="app.js" defer></script>
 </head>
 <body class="theme-light">
 
- 
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo"><span class="logo-mark">🌙</span> Doum Odara</a>
+
+      <!-- Botão do menu mobile -->
+      <button class="nav-toggle" aria-label="Menu">
+        <span class="hamb"></span>
+      </button>
+
+      <!-- Navegação desktop -->
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -26,22 +34,31 @@
           <li><a href="contato.html">Fale Conosco</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
         <button id="theme-toggle" class="btn small" aria-label="Alternar tema">🌙</button>
       </div>
     </div>
-  </header>
 
+    <!-- Menu mobile (painel) -->
+    <div class="site-nav-panel" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="contato.html">Fale Conosco</a></li>
+      </ul>
+    </div>
+  </header>
 
   <section class="hero container">
     <div>
       <h1>Nossos Produtos</h1>
       <p class="lead">Explore todos os produtos da Doum Odara. Use a busca ou filtre por preço, nome e categoria para encontrar exatamente o que você procura.</p>
     </div>
-    <img src="produtos.png" alt="Produtos Loja Doum Odara ">
+    <img src="produtos.png" alt="Produtos Loja Doum Odara">
   </section>
 
-  
   <section class="controls container">
     <div class="control-row">
       <input type="search" id="search" placeholder="Buscar produtos..." />
@@ -56,7 +73,6 @@
     </div>
   </section>
 
- 
   <section class="products container">
     <div class="section-header">
       <h2>Todos os Produtos</h2>
@@ -66,28 +82,23 @@
     </div>
   </section>
 
-
   <footer class="site-footer">
-  <div class="container footer-inner">
-    <small>&copy; <span id="year"></span> Doum Odara — Artigos Religiosos. Feito com fé, amor e respeito.</small>
+    <div class="container footer-inner">
+      <small>&copy; <span id="year"></span> Doum Odara — Artigos Religiosos. Feito com fé, amor e respeito.</small>
 
-    <div style="margin-top:.75rem; display:flex; justify-content:center; gap:1rem;">
-      <a href="https://www.tiktok.com/@doumodara?_t=ZM-90vu83D2NdA&_r=1" target="_blank" rel="noopener" aria-label="TikTok Doum Odara" style="font-size:1.4rem;">
-        <img src="tiktok.jpg" alt="TikTok" width="26" height="26" style="vertical-align:middle;">
-      </a>
-      <a href="https://www.instagram.com/doumodara?igsh=NTQyZHZ2cnYyOThr" target="_blank" rel="noopener" aria-label="Instagram Doum Odara" style="font-size:1.4rem;">
-        <img src="insta.jpg" alt="Instagram" width="26" height="26" style="vertical-align:middle;">
-      </a>
+      <div style="margin-top: .75rem; display: flex; justify-content: center; gap: 1rem;">
+        <a href="https://www.tiktok.com/@doumodara?_t=ZM-90vu83D2NdA&_r=1" target="_blank" rel="noopener" aria-label="TikTok Doum Odara">
+          <img src="tiktok.jpg" alt="TikTok" width="26" height="26" style="vertical-align: middle;">
+        </a>
+        <a href="https://www.instagram.com/doumodara?igsh=NTQyZHZ2cnYyOThr" target="_blank" rel="noopener" aria-label="Instagram Doum Odara">
+          <img src="insta.jpg" alt="Instagram" width="26" height="26" style="vertical-align: middle;">
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+  </footer>
 
   <script>
+    // Define o ano dinamicamente (apenas uma vez)
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
