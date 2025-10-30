@@ -423,4 +423,27 @@ function checkout() {
   let total = 0;
 
   cart.forEach((item) => {
-    const subtotal = item.preco * (item.qty
+    const subtotal = item.preco * (item.qty || 1);
+    mensagem += `• ${item.nome} — ${item.qty} x R$ ${fmt(item.preco)} = R$ ${fmt(subtotal)}%0A`;
+    total += subtotal;
+  });
+
+  mensagem += `%0ATotal: R$ ${fmt(total)}%0A%0APor favor, me informe prazo de produção e formas de pagamento.`;
+
+  // Corrigido: removido espaço no número de telefone
+  const telefone = '5511966753014';
+  const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
+
+// ========== Inicialização ==========
+(function initCartOnLoad() {
+  loadCart();
+  updateCartUI();
+})();
+
+// ========== Exportar funções globais ==========
+window.adicionarAoCarrinhoPorId = adicionarAoCarrinhoPorId;
+window.addToCart = addToCart;
+window.removeFromCart = removeFromCart;
