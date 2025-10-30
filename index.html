@@ -2,32 +2,33 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title> DOUM ODARA — Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DOUM ODARA — Home</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
+  
+  <!-- Font Awesome (corrigido: removidos espaços extras) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
+  
   <!-- JS -->
   <script src="app.js" defer></script>
 </head>
 <body class="theme-light">
 
-
   <header class="site-header">
-    <div class="site-nav-panel" id="mobile-menu">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="produtos.html">Produtos</a></li>
-    <li><a href="quem-somos.html">Quem Somos</a></li>
-    <li><a href="contato.html">Fale Conosco</a></li>
-  </ul>
-</div>
     <div class="container header-inner">
       <a href="index.html" class="logo"><span class="logo-mark">🌙</span> Doum Odara</a>
+      
+      <!-- Botão do menu mobile -->
+      <button class="nav-toggle" aria-label="Menu">
+        <span class="hamb"></span>
+      </button>
+
+      <!-- Navegação desktop -->
       <nav class="main-nav">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -36,13 +37,23 @@
           <li><a href="contato.html">Fale Conosco</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
         <button id="theme-toggle" class="btn small" aria-label="Alternar tema">🌙</button>
       </div>
     </div>
+
+    <!-- Menu mobile (painel) -->
+    <div class="site-nav-panel" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="contato.html">Fale Conosco</a></li>
+      </ul>
+    </div>
   </header>
 
-  
   <section class="hero container">
     <div>
       <h1>Bem-vindo à Loja Doum Odara</h1>
@@ -52,7 +63,6 @@
     <img src="doum.png" alt="Produtos Loja Doum Odara">
   </section>
 
-  
   <section class="controls container">
     <div class="control-row">
       <input type="search" id="search" placeholder="Buscar produtos..." />
@@ -67,36 +77,32 @@
     </div>
   </section>
 
- 
   <section class="products container">
     <div class="section-header">
       <h2>Destaques</h2>
     </div>
     <div id="products-list" class="products-grid">
-     
+      <!-- Produtos serão inseridos via JS -->
     </div>
   </section>
 
- 
   <section class="about container">
     <h2>Sobre a Loja Doum Odara</h2>
     <p class="lead">Na Doum Odara, buscamos oferecer produtos que elevam sua espiritualidade e bem-estar. Cada item é escolhido com cuidado, garantindo qualidade e autenticidade.</p>
   </section>
 
-  
   <section class="faq container">
     <h2>Perguntas Frequentes</h2>
-    <div class="faq-controls" style="margin-bottom:.75rem;">
+    <div class="faq-controls" style="margin-bottom: .75rem;">
       <button id="faq-open-all" class="btn small ghost">Abrir todos</button>
       <button id="faq-close-all" class="btn small ghost">Fechar todos</button>
-      <span id="faq-counter" style="margin-left:1rem; font-size:.95rem;">0 abertas</span>
+      <span id="faq-counter" style="margin-left: 1rem; font-size: .95rem;">0 abertas</span>
     </div>
 
     <div class="faq-item">
       <button class="faq-q">Como faço para acompanhar meu pedido? <span class="toggle-icon">+</span></button>
       <div class="faq-a">Você receberá um código de rastreio por e-mail assim que o pedido for enviado.</div>
     </div>
-
 
     <div class="faq-item">
       <button class="faq-q">Quais formas de pagamento são aceitas? <span class="toggle-icon">+</span></button>
@@ -106,33 +112,28 @@
     <div class="faq-item">
       <button class="faq-q">Como faço para encomendar um produto? <span class="toggle-icon">+</span></button>
       <div class="faq-a">Você pode encomendar um produto diretamente pelo nosso site, adicionando-o ao carrinho e seguindo as instruções de checkout.</div>
+    </div>
   </section>
 
-  
   <footer class="site-footer">
-  <div class="container footer-inner">
-    <small>&copy; <span id="year"></span> Doum Odara — Artigos Religiosos. Feito com fé, amor e respeito.</small>
+    <div class="container footer-inner">
+      <small>&copy; <span id="year"></span> Doum Odara — Artigos Religiosos. Feito com fé, amor e respeito.</small>
 
-    <div style="margin-top:.75rem; display:flex; justify-content:center; gap:1rem;">
-      <a href="https://www.tiktok.com/@doumodara?_t=ZM-90vu83D2NdA&_r=1" target="_blank" rel="noopener" aria-label="TikTok Doum Odara" style="font-size:1.4rem;">
-        <img src="tiktok.jpg" alt="TikTok" width="26" height="26" style="vertical-align:middle;">
-      </a>
-      <a href="https://www.instagram.com/doumodara?igsh=NTQyZHZ2cnYyOThr" target="_blank" rel="noopener" aria-label="Instagram Doum Odara" style="font-size:1.4rem;">
-        <img src="insta.jpg" alt="Instagram" width="26" height="26" style="vertical-align:middle;">
-      </a>
+      <div style="margin-top: .75rem; display: flex; justify-content: center; gap: 1rem;">
+        <a href="https://www.tiktok.com/@doumodara?_t=ZM-90vu83D2NdA&_r=1" target="_blank" rel="noopener" aria-label="TikTok Doum Odara">
+          <img src="tiktok.jpg" alt="TikTok" width="26" height="26" style="vertical-align: middle;">
+        </a>
+        <a href="https://www.instagram.com/doumodara?igsh=NTQyZHZ2cnYyOThr" target="_blank" rel="noopener" aria-label="Instagram Doum Odara">
+          <img src="insta.jpg" alt="Instagram" width="26" height="26" style="vertical-align: middle;">
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+  </footer>
 
   <script>
+    // Define o ano dinamicamente (apenas uma vez)
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
 </html>
-
