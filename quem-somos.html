@@ -2,17 +2,17 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Doum Odara — Quem Somos</title>
   <meta name="description" content="Doum Odara — artigos religiosos confeccionados com fé, amor e tradição. Conheça nossa essência e o axé que guia cada criação.">
 
-  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
- 
+  <!-- JS -->
   <script src="app.js" defer></script>
 </head>
 
@@ -24,6 +24,12 @@
         <span class="logo-mark" aria-hidden="true">🌙</span> Doum Odara
       </a>
 
+      <!-- Botão do menu mobile -->
+      <button class="nav-toggle" aria-label="Menu">
+        <span class="hamb"></span>
+      </button>
+
+      <!-- Navegação desktop -->
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -37,9 +43,18 @@
         <button id="theme-toggle" class="btn small" aria-label="Alternar tema">🌙</button>
       </div>
     </div>
+
+    <!-- Menu mobile (painel) -->
+    <div class="site-nav-panel" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
   </header>
 
- 
   <main>
     <!-- SOBRE -->
     <section class="hero container">
@@ -51,7 +66,7 @@
 
         <p class="lead">Que cada arte confeccionada seja um elo entre o visível e o invisível, entre o humano e o divino, irradiando boas energias e bênçãos.</p>
 
-        <div style="text-align:center; margin-top:1rem;">
+        <div style="text-align: center; margin-top: 1rem;">
           <a href="contato.html" class="btn primary">Entre em Contato</a>
         </div>
       </div>
@@ -59,7 +74,6 @@
       <img src="doum.png" alt="Símbolo Doum Odara" />
     </section>
 
-  
     <section class="team container">
       <h2>As Forças que nos Inspiram</h2>
       <p class="lead">A Doum Odara é guiada pelas energias dos Orixás, que representam a sabedoria, o movimento e a harmonia da natureza. Cada um deles inspira nossas criações e dá sentido à nossa caminhada.</p>
@@ -91,40 +105,30 @@
       </div>
     </section>
 
-  
-    <section class="container" style="margin-top:1.5rem;">
+    <section class="container" style="margin-top: 1.5rem;">
       <h2>Nosso Compromisso</h2>
       <p class="lead">Na Doum Odara, acreditamos que fé se manifesta em cada gesto. Por isso, criamos com respeito, intenção e consciência espiritual. Honramos a ancestralidade e celebramos o axé que move o universo, com humildade e gratidão a cada Orixá que nos guia.</p>
     </section>
   </main>
 
- 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>&copy; <span id="year"></span> Doum Odara — Artigos Religiosos. Feito com fé, amor e respeito.</small>
 
-      <footer class="site-footer">
-  <div class="container footer-inner">
-    <small>&copy; <span id="year"></span> Doum Odara — Artigos Religiosos. Feito com fé, amor e respeito.</small>
-
-    <div style="margin-top:.75rem; display:flex; justify-content:center; gap:1rem;">
-      <a href="https://www.tiktok.com/@doumodara?_t=ZM-90vu83D2NdA&_r=1" target="_blank" rel="noopener" aria-label="TikTok Doum Odara" style="font-size:1.4rem;">
-        <img src="tiktok.jpg" alt="TikTok" width="26" height="26" style="vertical-align:middle;">
-      </a>
-      <a href="https://www.instagram.com/doumodara?igsh=NTQyZHZ2cnYyOThr" target="_blank" rel="noopener" aria-label="Instagram Doum Odara" style="font-size:1.4rem;">
-        <img src="insta.jpg" alt="Instagram" width="26" height="26" style="vertical-align:middle;">
-      </a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+      <div style="margin-top: .75rem; display: flex; justify-content: center; gap: 1rem;">
+        <a href="https://www.tiktok.com/@doumodara?_t=ZM-90vu83D2NdA&_r=1" target="_blank" rel="noopener" aria-label="TikTok Doum Odara">
+          <img src="tiktok.jpg" alt="TikTok" width="26" height="26" style="vertical-align: middle;">
+        </a>
+        <a href="https://www.instagram.com/doumodara?igsh=NTQyZHZ2cnYyOThr" target="_blank" rel="noopener" aria-label="Instagram Doum Odara">
+          <img src="insta.jpg" alt="Instagram" width="26" height="26" style="vertical-align: middle;">
+        </a>
+      </div>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
-
